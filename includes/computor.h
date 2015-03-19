@@ -2,6 +2,7 @@
 # define COMPUTOR_H
 # include "libft.h"
 
-int		ft_sqrt(int n, int power);
+double		ft_pow(double n, double power);
+double		ft_sqrt(double n);
 
 #endif

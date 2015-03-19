@@ -1,16 +1,10 @@
 #include "computor.h"
 
-int			ft_sqrt(int n, int power)
+double			ft_sqrt(double n)
 {
-	int		res;
+	double 		res;
 
-	res = n;
-	if (power == 0)
-		return (1);
-	while (power > 1)
-	{
-		res *= n;
-		power--;
-	}
+	while (res * res < n)
+		res += 0.000001;
 	return (res);
 }

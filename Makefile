@@ -21,6 +21,7 @@ NAME= computor
 # define all the .c file in the variable SRC NAME
 SRC_PATH= srcs/
 SRC_NAME= main.c \
+	  ft_pow.c \
 	  ft_sqrt.c
 SRC= $(addprefix $(SRC_PATH), $(SRC_NAME))
 
