@@ -15,41 +15,13 @@
 # specify project
 
 #Define name of program here
-NAME= libftprintf.a
+NAME= computor
 
 #SRC BLOC
 # define all the .c file in the variable SRC NAME
 SRC_PATH= srcs/
-SRC_NAME= ft_printf.c \
-		  new_node.c \
-		  get_flag.c \
-		  get_opt.c \
-		  get_weight.c \
-		  get_precise.c \
-		  get_modifier.c  \
-		  get_format.c \
-		  read_node.c \
-		  read_char.c \
-		  read_schar.c \
-		  read_integer.c \
-		  read_decimal.c \
-		  read_hexa.c \
-		  read_octal.c \
-		  read_binaire.c \
-		  read_unsigned.c \
-		  read_void.c \
-		  print_weight.c \
-		  print_precise.c \
-		  print_wd.c \
-		  print_char.c \
-		  print_string.c \
-		  print_number.c \
-		  print_sharp.c \
-		  print_unsigned.c \
-		  convert_base.c \
-		  convert_long_base.c \
-		  convert_unsigned_base.c \
-		  unsignedlen.c
+SRC_NAME= main.c \
+	  ft_sqrt.c
 SRC= $(addprefix $(SRC_PATH), $(SRC_NAME))
 
 #OBJ BLOC
@@ -79,8 +51,8 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@make -C libft/ re
-	@ar rc $(NAME) $(OBJ) ./libft/obj/*.o
 	@make -C libft/ clean
+	@$(GCC) $(SRC) $(INC) $(LIB) -o $(NAME)
 	@echo "$(NAME) has been created."
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
