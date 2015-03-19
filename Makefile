@@ -22,7 +22,8 @@ NAME= computor
 SRC_PATH= srcs/
 SRC_NAME= main.c \
 	  ft_pow.c \
-	  ft_sqrt.c
+	  ft_sqrt.c \
+	  ft_atoi_double.c
 SRC= $(addprefix $(SRC_PATH), $(SRC_NAME))
 
 #OBJ BLOC
