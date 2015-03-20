@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_pow.c                                           :+:      :+:    :+:   */
+/*   new_node.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alegent <alegent@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/03/20 10:23:48 by alegent           #+#    #+#             */
-/*   Updated: 2015/03/20 10:23:50 by alegent          ###   ########.fr       */
+/*   Created: 2015/03/20 12:11:07 by alegent           #+#    #+#             */
+/*   Updated: 2015/03/20 12:22:40 by alegent          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "computor.h"
 
-double			ft_pow(double n, double power)
+t_node				*new_node(void)
 {
-	double		res;
+	t_node			*new;
 
-	res = n;
-	if (power == 0)
-		return (1);
-	while (power > 1)
-	{
-		res *= n;
-		power--;
-	}
-	return (res);
+	if (!(new = (t_node *)malloc(sizeof(t_node))))
+		ft_puterror("computor", "struct can't be malloc");
+	new->a = NULL;
+	new->b = NULL;
+	new->c = NULL;
+	new->sign = 0;
+	return (new);
 }

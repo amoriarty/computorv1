@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_pow.c                                           :+:      :+:    :+:   */
+/*   degres.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alegent <alegent@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/03/20 10:23:48 by alegent           #+#    #+#             */
-/*   Updated: 2015/03/20 10:23:50 by alegent          ###   ########.fr       */
+/*   Created: 2015/03/20 13:16:16 by alegent           #+#    #+#             */
+/*   Updated: 2015/03/20 13:23:46 by alegent          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "computor.h"
 
-double			ft_pow(double n, double power)
+int					degres(char *base)
 {
-	double		res;
+	int				i;
 
-	res = n;
-	if (power == 0)
-		return (1);
-	while (power > 1)
+	i = -1;
+	while (base[++i])
 	{
-		res *= n;
-		power--;
+		if (base[i] == '^' && base[i + 1] == '2')
+			return (2);
+		if (base[i] == '^' && base[i + 1] > '2')
+			ft_puterror("computor", "The polynomial degres is to high for me");
 	}
-	return (res);
+	return (1);
 }

@@ -1,11 +1,21 @@
-#include "computor.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi_double.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alegent <alegent@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2015/03/20 10:23:40 by alegent           #+#    #+#             */
+/*   Updated: 2015/03/20 10:24:54 by alegent          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stdio.h>
+#include "computor.h"
 
 double			ft_atoi_double(const char *s)
 {
-	int		i;
-	int		x;
+	int			i;
+	int			x;
 	double		sign;
 	double		res;
 
