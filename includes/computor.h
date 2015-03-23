@@ -6,7 +6,7 @@
 /*   By: alegent <alegent@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/20 10:24:35 by alegent           #+#    #+#             */
-/*   Updated: 2015/03/23 11:04:09 by alegent          ###   ########.fr       */
+/*   Updated: 2015/03/23 16:56:53 by alegent          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,9 @@
 typedef struct s_node	t_node;
 struct					s_node
 {
-	char				*a;
-	char				*b;
-	char				*c;
-	int					sign;
+	double				a;
+	double				b;
+	double				c;
 };
 
 double					ft_pow(double n, double power);
@@ -33,5 +32,10 @@ double					ft_sqrt(double n);
 double					ft_atoi_double(const char *s);
 t_node					*new_node(void);
 int						degres(char *base);
+char					**ft_split(const char *s);
+t_node					*get_value(char *base, char **split);
+void					ft_putdouble(double n);
+void					print_second(t_node *node);
+void					print_one(t_node *node);
 
 #endif

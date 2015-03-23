@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   new_node.c                                         :+:      :+:    :+:   */
+/*   print_second.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alegent <alegent@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/03/20 12:11:07 by alegent           #+#    #+#             */
-/*   Updated: 2015/03/23 14:04:23 by alegent          ###   ########.fr       */
+/*   Created: 2015/03/23 16:45:00 by alegent           #+#    #+#             */
+/*   Updated: 2015/03/23 16:54:30 by alegent          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "computor.h"
 
-t_node				*new_node(void)
+void				print_one(t_node *node)
 {
-	t_node			*new;
-
-	if (!(new = (t_node *)malloc(sizeof(t_node))))
-		ft_puterror("computor", "struct can't be malloc");
-	new->a = 0;
-	new->b = 0;
-	new->c = 0;
-	return (new);
+	ft_putstr("Reduced form : ");
+	ft_putdouble(node->b);
+	ft_putstr(" X");
+	ft_putstr((node->b > 0) ? " + " : " ");
+	ft_putdouble(node->c);
+	ft_putendl(" = 0");
 }
