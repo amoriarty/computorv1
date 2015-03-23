@@ -6,7 +6,7 @@
 #    By: alegent <alegent@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/03/04 09:54:26 by alegent           #+#    #+#              #
-#    Updated: 2015/03/20 13:22:48 by alegent          ###   ########.fr        #
+#    Updated: 2015/03/23 11:04:19 by alegent          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,8 +25,7 @@ SRC_NAME= main.c \
 	  ft_sqrt.c \
 	  ft_atoi_double.c \
 	  new_node.c \
-	  analyze.c \
-	  degres.c
+	  degres.c 
 SRC= $(addprefix $(SRC_PATH), $(SRC_NAME))
 
 #OBJ BLOC

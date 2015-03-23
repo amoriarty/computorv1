@@ -6,7 +6,7 @@
 /*   By: alegent <alegent@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/20 10:24:04 by alegent           #+#    #+#             */
-/*   Updated: 2015/03/20 13:23:27 by alegent          ###   ########.fr       */
+/*   Updated: 2015/03/23 11:05:47 by alegent          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,12 @@
 
 int					main(int ac, char **av)
 {
-	char			*first;
-	char			*second;
+	char			**equation;
 
 	if (ac != 2)
 		ft_puterror("computor", "I only take one argument");
-	first = analyze(av[1]);
-	second = analyze(av[1]);
-	printf("first = %s\n", first);
-	printf("second = %s\n", second);
-	printf("degres = %d\n", degres(first));
+	equation = ft_strsplit(av[1], '=');
+	printf("%s\n%s\n", equation[0], equation[1]);
+	printf("%f\n", ft_atoi_double(" 1 * X^0"));
 	return (42);
 }
