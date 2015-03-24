@@ -74,6 +74,6 @@ char			**ft_split(const char *s)
 			i++;
 		}
 	}
-	tab[i] = 0;
+	tab[i] = NULL;
 	return (tab);
 }

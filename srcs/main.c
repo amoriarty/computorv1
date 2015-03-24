@@ -12,6 +12,7 @@
 
 #include "computor.h"
 
+/*
 static void				verifx(char *base)
 {
 	char				*tmp;
@@ -31,6 +32,7 @@ static void				verifx(char *base)
 			ft_puterror("computor", "don't bullshit me !");
 	}
 }
+*/
 
 static int				bullshit(char i)
 {
@@ -66,8 +68,8 @@ static void				format(char *base)
 	shit = FALSE;
 	if (!ft_strchr(base, 'X'))
 		ft_puterror("computor", "I have no X");
-	if (!ft_strchr(base, '^'))
-		ft_puterror("computor", "you have to type X^[power]");
+//	if (!ft_strchr(base, '^'))
+//		ft_puterror("computor", "you have to type X^[power]");
 	while (++i < 300)
 	{
 		if ((tmp = ft_strchr(base, i)))
@@ -84,7 +86,7 @@ int					main(int ac, char **av)
 	if (!ft_strchr(av[1], '='))
 		ft_puterror("computor", "I'm not an equation !");
 	format(av[1]);
-	verifx(av[1]);
+//	verifx(av[1]);
 	computor(av[1]);
 	return (42);
 }

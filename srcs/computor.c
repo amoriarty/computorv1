@@ -1,7 +1,5 @@
 #include "computor.h"
 
-#include <stdio.h>
-
 static int		go(t_node *node, char *base)
 {
 	node->deg = degres(base);
@@ -27,6 +25,7 @@ static void		reduc(t_node *node)
 
 	tmp = new_node();
 	tmp->d = ft_split(node->e[1]);
+	verif_split(tmp);
 	get_value(tmp);
 	node->a += tmp->a * -1;
 	node->b += tmp->b * -1;
@@ -43,6 +42,7 @@ int			computor(char *base)
 	node->e = ft_strsplit(base, '=');
 	everything(node->e[0], node->e[1]);
 	node->d = ft_split(node->e[0]);
+	verif_split(node);
 	get_value(node);
 	if (ft_strcmp(node->e[1], " 0"))
 	{

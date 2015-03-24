@@ -50,5 +50,6 @@ int					solve_one(t_node *node);
 int					solve_two(t_node *node);
 char					*ft_dtoa(double n);
 char					*create_new_base(t_node *node);
+void					verif_split(t_node *node);
 
 #endif

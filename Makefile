@@ -37,7 +37,8 @@ SRC_NAME= main.c \
 	  solve_one.c \
 	  solve_two.c \
 	  ft_dtoa.c \
-	  create_new_base.c
+	  create_new_base.c \
+	  verif_split.c
 SRC= $(addprefix $(SRC_PATH), $(SRC_NAME))
 
 #OBJ BLOC
