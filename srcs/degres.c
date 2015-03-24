@@ -20,6 +20,8 @@ int					degres(char *base)
 	i = -1;
 	while (base[++i])
 	{
+		if (base[i] == '^' && base[i + 1] == '0')
+			res = 0;
 		if (base[i] == '^' && base[i + 1] == '1')
 			res = 1;
 		if (base[i] == '^' && base[i + 1] == '2')
@@ -29,5 +31,7 @@ int					degres(char *base)
 	}
 	if (res > 2)
 		ft_puterror("computor", "The polynomial degres is to high for me");
+	else if (res == -1)
+		ft_puterror("computor", "don't bullshit me");
 	return (res);
 }

@@ -45,5 +45,7 @@ void					print_one(t_node *node);
 int					computor(char *base);
 void					print_degres(int degres_v);
 void					everything(char *e1, char *e2);
+int					solve_one(t_node *node);
+int					solve_two(t_node *node);
 
 #endif
