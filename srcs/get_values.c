@@ -42,11 +42,11 @@ int				get_value(t_node *node, char *base)
 		if ((tmp = ft_strchr(node->d[i], 'X')))
 		{
 			if (*(tmp + 2) == '2')
-				node->a = ft_atoi_double(node->d[i]);
+				node->a += ft_atoi_double(node->d[i]);
 			if (*(tmp + 2) == '1')
-				node->b = ft_atoi_double(node->d[i]);
+				node->b += ft_atoi_double(node->d[i]);
 			if (*(tmp + 2) == '0')
-				node->c = ft_atoi_double(node->d[i]);
+				node->c += ft_atoi_double(node->d[i]);
 		}
 		i++;
 	}

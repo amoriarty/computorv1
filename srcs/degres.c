@@ -18,10 +18,9 @@ int					degres(char *base)
 	int				res;
 
 	i = -1;
+	res = 0;
 	while (base[++i])
 	{
-		if (base[i] == '^' && base[i + 1] == '0')
-			res = 0;
 		if (base[i] == '^' && base[i + 1] == '1')
 			res = 1;
 		if (base[i] == '^' && base[i + 1] == '2')
