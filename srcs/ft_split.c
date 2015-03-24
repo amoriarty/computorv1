@@ -68,9 +68,10 @@ char			**ft_split(const char *s)
 				return (NULL);
 			while (*s != '+' && *s != '-' && *s && ft_isprint(*s))
 				tab[i][x++] = *s++;
+			tab[i][x] = '\0';
 			if (tmp == '-')
 				tab[i] = ft_strjoin("-", tab[i]);
-			tab[i++][x] = '\0';
+			i++;
 		}
 	}
 	tab[i] = 0;

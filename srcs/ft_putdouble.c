@@ -14,11 +14,5 @@
 
 void				ft_putdouble(double n)
 {
-	int				tmp;
-
-	ft_putnbr((int)n);
-	ft_putchar('.');
-	tmp = n * 1000000;
-	tmp *= (tmp < 0) ? -1 : 1;
-	ft_putnbr(tmp % 1000000);
+	ft_putstr(ft_dtoa(n));
 }

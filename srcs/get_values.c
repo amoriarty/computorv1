@@ -29,6 +29,8 @@ int				get_value(t_node *node)
 			if (*(tmp + 2) == '0')
 				node->c += ft_atoi_double(node->d[i]);
 		}
+		else
+			node->c += ft_atoi_double(node->d[i]);
 		i++;
 	}
 	return (SUCCESS);

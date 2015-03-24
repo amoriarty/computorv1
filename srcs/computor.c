@@ -21,18 +21,33 @@ static int		go(t_node *node, char *base)
 	return (ERROR);
 }
 
+static void		reduc(t_node *node)
+{
+	t_node		*tmp;
+
+	tmp = new_node();
+	tmp->d = ft_split(node->e[1]);
+	get_value(tmp);
+	node->a += tmp->a * -1;
+	node->b += tmp->b * -1;
+	node->c += tmp->c * -1;
+}
+
 int			computor(char *base)
 {
+//	char		*to_go;
 	t_node		*node;
 
+//	to_go = base;
 	node = new_node();
 	node->e = ft_strsplit(base, '=');
 	everything(node->e[0], node->e[1]);
 	node->d = ft_split(node->e[0]);
 	get_value(node);
 	if (ft_strcmp(node->e[1], " 0"))
-		node->c += (ft_atoi_double(node->e[1]) * -1);
-	if (degres(node->e[1]) == 2)
-		ft_puterror("computor", "please, put X^2 to the left");
+	{
+		reduc(node);
+//		to_go = create_new_base(node);
+	}
 	return (go(node, base));
 }

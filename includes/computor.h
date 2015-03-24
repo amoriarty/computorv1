@@ -30,6 +30,7 @@ struct					s_node
 	char				**d;
 	char				**e;
 	int				deg;
+	char				*reduc;
 };
 
 double					ft_pow(double n, double power);
@@ -47,5 +48,6 @@ void					print_degres(int degres_v);
 void					everything(char *e1, char *e2);
 int					solve_one(t_node *node);
 int					solve_two(t_node *node);
+char					*ft_dtoa(double n);
 
 #endif

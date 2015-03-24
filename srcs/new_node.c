@@ -23,6 +23,7 @@ t_node				*new_node(void)
 	new->c = 0;
 	new->d = NULL;
 	new->e = NULL;
-	new->d = 0;
+	new->deg = 0;
+	new->reduc = NULL;
 	return (new);
 }
