@@ -22,11 +22,11 @@ int					degres(char *base)
 	while (base[++i])
 	{
 		if (base[i] == '^' && base[i + 1] == '1')
-			res = 1;
+			res = (res < 1) ? 1 : res;
 		if (base[i] == '^' && base[i + 1] == '2')
-			res = 2;
+			res = (res < 2) ? 2 : res;
 		if (base[i] == '^' && base[i + 1] > '2')
-			res = 3;
+			res = (res < 3) ? 3 : res;
 	}
 	if (res > 2)
 		ft_puterror("computor", "The polynomial degres is to high for me");

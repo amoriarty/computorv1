@@ -1,5 +1,13 @@
 #include "computor.h"
 
+static void		mult(t_node *node, int i)
+{
+	char		*tmp;
+
+	if ((tmp = ft_strchr(node->d[i], '*')) && !(ft_strchr(tmp, 'X')))
+		ft_puterror("computor", "don't bullshit me !");
+}
+
 static void		alone(t_node *node, int i)
 {
 		if (!ft_strcmp(ft_strtrim(node->d[i]), "X"))
@@ -35,10 +43,9 @@ void			verif_split(t_node *node)
 
 	i = -1;
 	while (node->d[++i])
-		alone(node, i);
-	i = -1;
-	while (node->d[++i])
 	{
+		alone(node, i);
+		mult(node, i);
 		if ((tmp = ft_strchr(node->d[i], '^')))
 		{
 			if (*(tmp - 1) && *(tmp - 1) != 'X')
