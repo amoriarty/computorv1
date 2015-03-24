@@ -35,10 +35,10 @@ static void		reduc(t_node *node)
 
 int			computor(char *base)
 {
-//	char		*to_go;
+	char		*to_go;
 	t_node		*node;
 
-//	to_go = base;
+	to_go = base;
 	node = new_node();
 	node->e = ft_strsplit(base, '=');
 	everything(node->e[0], node->e[1]);
@@ -47,7 +47,7 @@ int			computor(char *base)
 	if (ft_strcmp(node->e[1], " 0"))
 	{
 		reduc(node);
-//		to_go = create_new_base(node);
+		to_go = create_new_base(node);
 	}
-	return (go(node, base));
+	return (go(node, to_go));
 }

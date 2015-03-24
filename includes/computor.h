@@ -49,5 +49,6 @@ void					everything(char *e1, char *e2);
 int					solve_one(t_node *node);
 int					solve_two(t_node *node);
 char					*ft_dtoa(double n);
+char					*create_new_base(t_node *node);
 
 #endif
