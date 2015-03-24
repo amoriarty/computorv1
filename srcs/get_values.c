@@ -12,26 +12,7 @@
 
 #include "computor.h"
 
-static void			are_you_sure(t_node *node, char *base)
-{
-	char			*tmp0;
-	double			tmp1;
-
-	tmp0 = base;
-	while ((tmp0 = ft_strchr(tmp0, '-')))
-	{
-		tmp0++;
-		tmp1 = ft_atoi_double(tmp0);
-		if (node->a == tmp1)
-			node->a *= -1;
-		if (node->b == tmp1)
-			node->b *= -1;
-		if (node->c == tmp1)
-			node->c *= -1;
-	}
-}
-
-int				get_value(t_node *node, char *base)
+int				get_value(t_node *node)
 {
 	int				i;
 	char			*tmp;
@@ -39,6 +20,7 @@ int				get_value(t_node *node, char *base)
 	i = 0;
 	while (node->d[i])
 	{
+		ft_putendl(node->d[i]);
 		if ((tmp = ft_strchr(node->d[i], 'X')))
 		{
 			if (*(tmp + 2) == '2')
@@ -50,6 +32,5 @@ int				get_value(t_node *node, char *base)
 		}
 		i++;
 	}
-	are_you_sure(node, base);
 	return (SUCCESS);
 }
