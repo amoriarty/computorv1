@@ -38,7 +38,7 @@ double					ft_atoi_double(const char *s);
 t_node					*new_node(void);
 int						degres(char *base);
 char					**ft_split(const char *s);
-int					get_value(t_node *node, char *base);
+int					get_value(t_node *node);
 void					ft_putdouble(double n);
 void					print_second(t_node *node);
 void					print_one(t_node *node);

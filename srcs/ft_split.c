@@ -48,6 +48,7 @@ static size_t	get_word_length(const char *s)
 char			**ft_split(const char *s)
 {
 	char	**tab;
+	char	tmp;
 	int		i;
 	int		x;
 
@@ -59,7 +60,7 @@ char			**ft_split(const char *s)
 	while (*s)
 	{
 		while (*s == '-' || *s == '+')
-			s++;
+			tmp = *(s++);
 		if (*s != '-' && *s != '-' && *s && ft_isprint(*s))
 		{
 			x = 0;
@@ -67,6 +68,8 @@ char			**ft_split(const char *s)
 				return (NULL);
 			while (*s != '+' && *s != '-' && *s && ft_isprint(*s))
 				tab[i][x++] = *s++;
+			if (tmp == '-')
+				tab[i] = ft_strjoin("-", tab[i]);
 			tab[i++][x] = '\0';
 		}
 	}

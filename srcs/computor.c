@@ -29,7 +29,7 @@ int			computor(char *base)
 	node->e = ft_strsplit(base, '=');
 	everything(node->e[0], node->e[1]);
 	node->d = ft_split(node->e[0]);
-	get_value(node, base);
+	get_value(node);
 	if (ft_strcmp(node->e[1], " 0"))
 		node->c += (ft_atoi_double(node->e[1]) * -1);
 	if (degres(node->e[1]) == 2)
