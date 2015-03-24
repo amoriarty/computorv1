@@ -18,6 +18,8 @@
 # define POSITIVE 1
 # define NEGATIVE -1
 # define ERROR -1
+# define SUCCESS 1
+# define FAILURE 0
 
 typedef struct s_node	t_node;
 struct					s_node
@@ -37,5 +39,6 @@ t_node					*get_value(char *base, char **split);
 void					ft_putdouble(double n);
 void					print_second(t_node *node);
 void					print_one(t_node *node);
+int					computor(t_node *node, int degres_v);
 
 #endif

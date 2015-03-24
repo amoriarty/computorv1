@@ -26,6 +26,8 @@ double			ft_atoi_double(const char *s)
 		i++;
 	sign = (s[i] == '-') ? -1 : 1;
 	i += (s[i] == '-' || s[i] == '+') ? 1 : 0;
+	while (s[i] && s[i] == ' ')
+		i++;
 	while (s[i] && s[i] != '.' && s[i] >= '0' && s[i] <= '9')
 		res = res * 10 + (s[i++] - '0');
 	i += (s[i] == '.') ? 1 : 0;

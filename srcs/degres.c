@@ -15,14 +15,19 @@
 int					degres(char *base)
 {
 	int				i;
+	int				res;
 
 	i = -1;
 	while (base[++i])
 	{
+		if (base[i] == '^' && base[i + 1] == '1')
+			res = 1;
 		if (base[i] == '^' && base[i + 1] == '2')
-			return (2);
+			res = 2;
 		if (base[i] == '^' && base[i + 1] > '2')
-			ft_puterror("computor", "The polynomial degres is to high for me");
+			res = 3;
 	}
-	return (1);
+	if (res > 2)
+		ft_puterror("computor", "The polynomial degres is to high for me");
+	return (res);
 }

@@ -17,10 +17,10 @@ void				print_second(t_node *node)
 	ft_putstr("Reduced form (ax^2 + bx + c): ");
 	ft_putdouble(node->a);
 	ft_putstr(" X^2");
-	ft_putstr((node->b > 0) ? " + " : " ");
+	ft_putstr((node->b >= 0) ? " + " : " ");
 	ft_putdouble(node->b);
 	ft_putstr(" X");
-	ft_putstr((node->b > 0) ? " + " : " ");
+	ft_putstr((node->c >= 0) ? " + " : " ");
 	ft_putdouble(node->c);
 	ft_putendl(" = 0");
 }
