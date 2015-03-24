@@ -57,11 +57,25 @@ static int		solve_two(t_node *node)
 	return (SUCCESS);
 }
 
-int			computor(t_node *node, int degres_v)
+int			computor(char *base)
 {
-	if (degres_v == 1)
+	t_node		*node;
+
+	node = new_node();
+	node->e = ft_strsplit(base, '=');
+	everything(node->e[0], node->e[1]);
+	node->d = ft_split(node->e[0]);
+	get_value(node, base);
+	if (ft_strcmp(node->e[1], " 0"))
+		node->c += (ft_atoi_double(node->e[1]) * -1);
+	print_degres(node->deg = degres(node->e[0]));
+	if (node->deg == 2)
+		print_second(node);
+	else if (node->deg == 1)
+		print_one(node);
+	if (node->deg == 1)
 		return (solve_one(node));
-	else if (degres_v == 2)
+	else if (node->deg == 2)
 		return (solve_two(node));
 	return (ERROR);
 }

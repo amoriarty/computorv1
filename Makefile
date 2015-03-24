@@ -31,7 +31,9 @@ SRC_NAME= main.c \
 	  ft_putdouble.c \
 	  print_second.c \
 	  print_one.c \
-	  computor.c
+	  computor.c \
+	  everything.c \
+	  print_degres.c
 SRC= $(addprefix $(SRC_PATH), $(SRC_NAME))
 
 #OBJ BLOC

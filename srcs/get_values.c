@@ -31,27 +31,25 @@ static void			are_you_sure(t_node *node, char *base)
 	}
 }
 
-t_node				*get_value(char *base, char **split)
+int				get_value(t_node *node, char *base)
 {
 	int				i;
 	char			*tmp;
-	t_node			*node;
 
 	i = 0;
-	node = new_node();
-	while (split[i])
+	while (node->d[i])
 	{
-		if ((tmp = ft_strchr(split[i], 'X')))
+		if ((tmp = ft_strchr(node->d[i], 'X')))
 		{
 			if (*(tmp + 2) == '2')
-				node->a = ft_atoi_double(split[i]);
+				node->a = ft_atoi_double(node->d[i]);
 			if (*(tmp + 2) == '1')
-				node->b = ft_atoi_double(split[i]);
+				node->b = ft_atoi_double(node->d[i]);
 			if (*(tmp + 2) == '0')
-				node->c = ft_atoi_double(split[i]);
+				node->c = ft_atoi_double(node->d[i]);
 		}
 		i++;
 	}
 	are_you_sure(node, base);
-	return (node);
+	return (SUCCESS);
 }

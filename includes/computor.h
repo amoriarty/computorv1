@@ -27,6 +27,9 @@ struct					s_node
 	double				a;
 	double				b;
 	double				c;
+	char				**d;
+	char				**e;
+	int				deg;
 };
 
 double					ft_pow(double n, double power);
@@ -35,10 +38,12 @@ double					ft_atoi_double(const char *s);
 t_node					*new_node(void);
 int						degres(char *base);
 char					**ft_split(const char *s);
-t_node					*get_value(char *base, char **split);
+int					get_value(t_node *node, char *base);
 void					ft_putdouble(double n);
 void					print_second(t_node *node);
 void					print_one(t_node *node);
-int					computor(t_node *node, int degres_v);
+int					computor(char *base);
+void					print_degres(int degres_v);
+void					everything(char *e1, char *e2);
 
 #endif

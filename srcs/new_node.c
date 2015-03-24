@@ -21,5 +21,8 @@ t_node				*new_node(void)
 	new->a = 0;
 	new->b = 0;
 	new->c = 0;
+	new->d = NULL;
+	new->e = NULL;
+	new->d = 0;
 	return (new);
 }
