@@ -68,6 +68,8 @@ int			computor(char *base)
 	get_value(node, base);
 	if (ft_strcmp(node->e[1], " 0"))
 		node->c += (ft_atoi_double(node->e[1]) * -1);
+	if (degres(node->e[1]) == 2)
+		ft_puterror("computor", "please, put X^2 to the left");
 	print_degres(node->deg = degres(node->e[0]));
 	if (node->deg == 2)
 		print_second(node);
