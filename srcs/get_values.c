@@ -20,7 +20,6 @@ int				get_value(t_node *node)
 	i = 0;
 	while (node->d[i])
 	{
-		ft_putendl(node->d[i]);
 		if ((tmp = ft_strchr(node->d[i], 'X')))
 		{
 			if (*(tmp + 2) == '2')

@@ -17,7 +17,7 @@ void				print_one(t_node *node)
 	ft_putstr("Reduced form : ");
 	ft_putdouble(node->b);
 	ft_putstr(" X");
-	ft_putstr((node->b > 0) ? " + " : " ");
-	ft_putdouble(node->c);
+	ft_putstr((node->c >= 0) ? " + " : " - ");
+	ft_putdouble((node->c >= 0)? node->c : node->c * -1);
 	ft_putendl(" = 0");
 }
