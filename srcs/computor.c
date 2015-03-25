@@ -6,7 +6,7 @@
 /*   By: alegent <alegent@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/25 08:18:43 by alegent           #+#    #+#             */
-/*   Updated: 2015/03/25 08:18:50 by alegent          ###   ########.fr       */
+/*   Updated: 2015/03/25 15:05:12 by alegent          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 static int		go(t_node *node, char *base)
 {
 	node->deg = degres(base);
+	node->deg -= (node->a == 0) ? 1 : 0;
+	if (node->deg == 1 && node->b == 0)
+		ft_puterror("computor", "is not an equation");
 	print_degres(node->deg);
 	if (node->deg == 2)
 	{

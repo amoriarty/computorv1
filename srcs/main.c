@@ -6,7 +6,7 @@
 /*   By: alegent <alegent@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/20 10:24:04 by alegent           #+#    #+#             */
-/*   Updated: 2015/03/25 08:22:43 by alegent          ###   ########.fr       */
+/*   Updated: 2015/03/25 15:27:09 by alegent          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,11 +57,16 @@ static void				format(char *base)
 
 int						main(int ac, char **av)
 {
+	char				*tmp;
+
 	if (ac != 2)
 		ft_puterror("computor", "I only take one argument");
-	if (!ft_strchr(av[1], '='))
+	if (!(tmp = ft_strchr(av[1], '=')))
+		ft_puterror("computor", "I'm not an equation !");
+	if (*tmp && !(*(tmp + 1)))
 		ft_puterror("computor", "I'm not an equation !");
 	format(av[1]);
+	degres(av[1]);
 	computor(av[1]);
 	return (42);
 }
