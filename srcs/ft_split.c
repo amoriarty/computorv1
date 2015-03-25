@@ -6,11 +6,11 @@
 /*   By: alegent <alegent@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/08 16:01:39 by alegent           #+#    #+#             */
-/*   Updated: 2015/03/25 08:26:02 by alegent          ###   ########.fr       */
+/*   Updated: 2015/03/25 14:31:22 by alegent          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "computor.h"
 
 static int		count_words(const char *s)
 {
@@ -45,35 +45,44 @@ static size_t	get_word_length(const char *s)
 	return (length);
 }
 
-char			**ft_split(const char *s)
+static int		facto(const char *s, char **tab)
 {
-	char	**tab;
-	char	tmp;
-	int		i;
-	int		x;
+	int			i;
+	int			x;
+	char		tmp;
 
-	if (s == NULL)
-		return (NULL);
 	i = 0;
-	if (!(tab = (char **)malloc(sizeof(char*) * (count_words(s) + 1))))
-		return (NULL);
 	while (*s)
 	{
 		while (*s == '-' || *s == '+')
 			tmp = *(s++);
-		if (*s != '-' && *s != '-' && *s && ft_isprint(*s))
+		if (*s != '-' && *s != '+' && *s && ft_isprint(*s))
 		{
 			x = 0;
 			if (!(tab[i] = ft_strnew(get_word_length(s))))
-				return (NULL);
+				return (FAILURE);
 			while (*s != '+' && *s != '-' && *s && ft_isprint(*s))
 				tab[i][x++] = *s++;
-			tab[i][x] = '\0';
+			tab[i][x] = 0;
 			if (tmp == '-')
 				tab[i] = ft_strjoin("-", tab[i]);
 			i++;
 		}
 	}
+	return (i);
+}
+
+char			**ft_split(const char *s)
+{
+	char	**tab;
+	int		i;
+
+	if (s == NULL)
+		return (NULL);
+	if (!(tab = (char **)malloc(sizeof(char*) * (count_words(s) + 1))))
+		return (NULL);
+	if ((i = facto(s, tab)) == FAILURE)
+		return (NULL);
 	tab[i] = NULL;
 	return (tab);
 }
