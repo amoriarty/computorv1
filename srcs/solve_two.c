@@ -6,7 +6,7 @@
 /*   By: alegent <alegent@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/25 08:21:12 by alegent           #+#    #+#             */
-/*   Updated: 2015/03/25 14:50:56 by alegent          ###   ########.fr       */
+/*   Updated: 2015/03/25 16:16:28 by alegent          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int				solve_two(t_node *node)
 {
 	double		delta;
 
-	delta = ft_pow(node->b, 2) - (4 * node->a * node->b);
+	delta = ft_pow(node->b, 2) - (4 * node->a * node->c);
 	if (delta == 0)
 		delta_zero(node);
 	if (delta > 0)
