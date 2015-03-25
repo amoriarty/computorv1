@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   computor.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alegent <alegent@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2015/03/25 08:18:43 by alegent           #+#    #+#             */
+/*   Updated: 2015/03/25 08:18:50 by alegent          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "computor.h"
 
 static int		go(t_node *node, char *base)
@@ -32,7 +44,7 @@ static void		reduc(t_node *node)
 	node->c += tmp->c * -1;
 }
 
-int			computor(char *base)
+int				computor(char *base)
 {
 	char		*to_go;
 	t_node		*node;

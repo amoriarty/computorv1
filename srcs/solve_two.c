@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   solve_two.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alegent <alegent@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2015/03/25 08:21:12 by alegent           #+#    #+#             */
+/*   Updated: 2015/03/25 08:21:23 by alegent          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "computor.h"
 
 static void		delta_zero(t_node *node)
@@ -25,7 +37,7 @@ static void		delta_two(t_node *node, double delta)
 	ft_putchar(EOL);
 }
 
-int			solve_two(t_node *node)
+int				solve_two(t_node *node)
 {
 	double		delta;
 

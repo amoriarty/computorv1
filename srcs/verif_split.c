@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   verif_split.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alegent <alegent@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2015/03/25 08:21:39 by alegent           #+#    #+#             */
+/*   Updated: 2015/03/25 08:22:54 by alegent          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "computor.h"
 
 static void		mult(t_node *node, int i)
@@ -10,35 +22,35 @@ static void		mult(t_node *node, int i)
 
 static void		alone(t_node *node, int i)
 {
-		if (!ft_strcmp(ft_strtrim(node->d[i]), "X"))
-			node->b += 1;
-		if (!ft_strcmp(ft_strtrim(node->d[i]), "- X"))
-			node->b -= 1;
-		if (!ft_strcmp(ft_strtrim(node->d[i]), "-X"))
-			node->b -= 1;
-		if (!ft_strcmp(ft_strtrim(node->d[i]), "X^0"))
-			node->c += 1;
-		if (!ft_strcmp(ft_strtrim(node->d[i]), "- X^0"))
-			node->c -= 1;
-		if (!ft_strcmp(ft_strtrim(node->d[i]), "-X^0"))
-			node->c -= 1;
-		if (!ft_strcmp(ft_strtrim(node->d[i]), "X^1"))
-			node->b += 1;
-		if (!ft_strcmp(ft_strtrim(node->d[i]), "- X^1"))
-			node->b -= 1;
-		if (!ft_strcmp(ft_strtrim(node->d[i]), "-X^1"))
-			node->b -= 1;
-		if (!ft_strcmp(ft_strtrim(node->d[i]), "X^2"))
-			node->a += 1;
-		if (!ft_strcmp(ft_strtrim(node->d[i]), "- X^2"))
-			node->a -= 1;
-		if (!ft_strcmp(ft_strtrim(node->d[i]), "-X^2"))
-			node->a -= 1;
+	if (!ft_strcmp(ft_strtrim(node->d[i]), "X"))
+		node->b += 1;
+	if (!ft_strcmp(ft_strtrim(node->d[i]), "- X"))
+		node->b -= 1;
+	if (!ft_strcmp(ft_strtrim(node->d[i]), "-X"))
+		node->b -= 1;
+	if (!ft_strcmp(ft_strtrim(node->d[i]), "X^0"))
+		node->c += 1;
+	if (!ft_strcmp(ft_strtrim(node->d[i]), "- X^0"))
+		node->c -= 1;
+	if (!ft_strcmp(ft_strtrim(node->d[i]), "-X^0"))
+		node->c -= 1;
+	if (!ft_strcmp(ft_strtrim(node->d[i]), "X^1"))
+		node->b += 1;
+	if (!ft_strcmp(ft_strtrim(node->d[i]), "- X^1"))
+		node->b -= 1;
+	if (!ft_strcmp(ft_strtrim(node->d[i]), "-X^1"))
+		node->b -= 1;
+	if (!ft_strcmp(ft_strtrim(node->d[i]), "X^2"))
+		node->a += 1;
+	if (!ft_strcmp(ft_strtrim(node->d[i]), "- X^2"))
+		node->a -= 1;
+	if (!ft_strcmp(ft_strtrim(node->d[i]), "-X^2"))
+		node->a -= 1;
 }
 
 void			verif_split(t_node *node)
 {
-	int		i;
+	int			i;
 	char		*tmp;
 
 	i = -1;
