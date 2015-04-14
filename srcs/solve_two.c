@@ -6,7 +6,7 @@
 /*   By: alegent <alegent@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/25 08:21:12 by alegent           #+#    #+#             */
-/*   Updated: 2015/03/25 16:16:28 by alegent          ###   ########.fr       */
+/*   Updated: 2015/04/14 10:27:47 by alegent          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ static void		delta_neg(t_node *node, double delta)
 	ft_putchar(EOL);
 	ft_putstr("X2 = ");
 	ft_putdouble(r);
-	ft_putstr(" + i * ");
+	ft_putstr(" - i * ");
 	ft_putdouble(i);
 	ft_putchar(EOL);
 }
