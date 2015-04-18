@@ -6,7 +6,7 @@
 /*   By: alegent <alegent@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/25 08:21:12 by alegent           #+#    #+#             */
-/*   Updated: 2015/04/14 10:27:47 by alegent          ###   ########.fr       */
+/*   Updated: 2015/04/18 10:22:08 by alegent          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ static void		delta_two(t_node *node, double delta)
 
 	ft_putstr("Descriminant is strictly positive: ");
 	ft_putendl("there's two solutions");
-	r1 = ((node->b * -1) - ft_sqrt(delta)) / (2 * node->a);
-	r2 = ((node->b * -1) + ft_sqrt(delta)) / (2 * node->a);
+	r1 = ((node->b * -1) + ft_sqrt(delta)) / (2 * node->a);
+	r2 = ((node->b * -1) - ft_sqrt(delta)) / (2 * node->a);
 	ft_putstr("X1 = ");
 	ft_putdouble(r1);
 	ft_putchar(EOL);
